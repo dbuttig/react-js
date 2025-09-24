@@ -1,9 +1,11 @@
+let fname= 'Daniel';
+let lname = 'Buttig';
+let age = prompt("Guess Daniel's age..");
 
+//  old way
+//let result = fname +  ' ' + lname + ' is ' + age + ' years old';
+//alert(result);
 
-
-if (true) {
-  let name = 'Daniel';
-  name= 'Buttig';
-  alert(name);
-}
-
+// using template string
+let result = `${fname} ${lname} is ${age} years old!`;
+alert(result);
