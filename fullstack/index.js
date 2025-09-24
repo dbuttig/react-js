@@ -1,6 +1,9 @@
-const name = 'Daniel';
-var lastName = 'Buttig';
-alert(name);
 
 
+
+if (true) {
+  let name = 'Daniel';
+  name= 'Buttig';
+  alert(name);
+}
 
