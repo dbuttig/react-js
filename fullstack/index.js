@@ -1,29 +1,33 @@
-// original nepal object using traditional function definition
-//let nepal = {
-  //// add property
-  //mountains: ['Everest', 'Fish Tail', 'Annapurna'],
-  //// add method
-  //printWithDash: function() {
-    ////console.log('Inside printWithDash', this); // this refers to the nepal object
-    //setTimeout(function() {
-      ////console.log('Inside setTimeout', this); // this refers to window object
-      //console.log(this.mountains.join(' - '));
-    //}, 3000)
-  //}
-//};
+let thingsToDo = {
+  morning: "Exercise",
+  afternoon: 'Work',
+  evening: 'Code',
+  night: ['Sleep', 'Dream']
+}
 
-// nepal object using arrow function
+let {morning, afternoon} = thingsToDo; // Can destruct the object down into its components as their own variables
 
-let nepal = {
-  // add property
-  mountains: ['Everest', 'Fish Tail', 'Annapurna'],
-  // add method
-  printWithDash: function() {
-    //console.log('Inside printWithDash', this); // this refers to the nepal object
-    setTimeout(() =>
-      //console.log('Inside setTimeout', this); // this refers to nepal object
-      console.log(this.mountains.join(' - ')), 3000);
-  }
-};
+morning = 'Run'; // new variable acts as variables are expected to
 
-nepal.printWithDash();
+console.log(morning, ' - ', afternoon);
+
+// without destructuring
+//let uniStudent = student => {
+  //console.log(`${student.name} from ${student.university}`);
+//}
+
+// with destructuring
+//let uniStudent = student => {
+  //let {name, university} = student;
+  //console.log(`${name} from ${university}`);
+//}
+
+// destructuring while taking an argument
+let uniStudent = ({ name, university }) => {
+  console.log(`${name} from ${university}`);
+}
+
+uniStudent({
+  name: 'Daniel',
+  university: 'Truman State'
+});
