@@ -1,33 +1,7 @@
-let thingsToDo = {
-  morning: "Exercise",
-  afternoon: 'Work',
-  evening: 'Code',
-  night: ['Sleep', 'Dream']
-}
+let [firstMountain] = ['Everest', 'Fish Tail', 'Annapurna']; // gets the first element
+let [, secondMountain] = ['Everest', 'Fish Tail', 'Annapurna']; // skips over the first and gets the second element
+let [, , thirdMountain] = ['Everest', 'Fish Tail', 'Annapurna']; // skips over the first two elements and gets the third element
 
-let {morning, afternoon} = thingsToDo; // Can destruct the object down into its components as their own variables
-
-morning = 'Run'; // new variable acts as variables are expected to
-
-console.log(morning, ' - ', afternoon);
-
-// without destructuring
-//let uniStudent = student => {
-  //console.log(`${student.name} from ${student.university}`);
-//}
-
-// with destructuring
-//let uniStudent = student => {
-  //let {name, university} = student;
-  //console.log(`${name} from ${university}`);
-//}
-
-// destructuring while taking an argument
-let uniStudent = ({ name, university }) => {
-  console.log(`${name} from ${university}`);
-}
-
-uniStudent({
-  name: 'Daniel',
-  university: 'Truman State'
-});
+console.log(firstMountain);
+console.log(secondMountain);
+console.log(thirdMountain);
