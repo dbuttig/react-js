@@ -1,6 +1,25 @@
-function welcome(user='Mystery person', message='Goodday'){
-  alert(`Hello ${user}, ${message}`);
+//function greeting(message) {
+  //return alert(`${message}, everyone!`)
+//}
+
+let noParamFunction = () => alert('This is only a test.');
+
+noParamFunction();
+
+let greeting = message => alert(`${message}, everyone!`);
+
+greeting('Good morning');
+
+let createBlog = (title, body) => {
+  if (!title) {
+    throw new Error('A title is required');
+  }
+
+  if (!body) {
+    throw new Error('Body cannot be empty');
+  }
+
+  return alert(`${title} - ${body}`);
 }
 
-//welcome('Daniel', 'Good morning');
-welcome();
+createBlog('My title', 'Blog body');
